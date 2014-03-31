@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Basketball Score Board</title>
+    <script src="Timer.js"></script>
+</head>
+<body>
+    <div id="gameClock">
+        <input type="text" id="gameMinutes" class="timerDisplay" maxlength="2"/> :
+        <input type="text" id="gameSeconds" class="timerDisplay" maxlength="2"/> .
+        <input type="text" id="gameTenths" class="timerDisplay" maxlength="2"/>
+        <br><br>
+        <button onclick="start()">Start</button>
+        <button onclick="stop()">Stop</button>
+        <button onclick="edit()">Edit</button>
+    </div>
+    <div id="shotClock">
+        <input type="text" id="shotSeconds" class="timerDisplay" maxlength="2"/> .
+        <input type="text" id="shotTenths" class="timerDisplay" maxlength="2"/>
+    </div>
+    <div id="score">
+        <input type="text" id="homeTeam" class="teamName" maxlength="20"/>
+        <input type="number" id="homeScore" class="teamScore" maxlength="3" disabled="disabled" value="0"/>
+        <button onclick="adjustScore('home', 'up')">+</button>
+        <button onclick="adjustScore('home', 'down')">-</button>
+        <br>
+        <input type="text" id="awayTeam" class="teamName" maxlength="20"/>
+        <input type="number" id="awayScore" class="teamScore" maxlength="3" disabled="disabled" value="0"/>
+        <button onclick="adjustScore('away', 'up')">+</button>
+        <button onclick="adjustScore('away', 'down')">-</button>
+    </div>
+</body>
+
+<style>
+    .timerDisplay {
+        width: 20px;
+    }
+
+    .teamName {
+        width: 150px;
+    }
+
+    .teamScore {
+        width: 30px;
+    }
+</style>
+</html>
